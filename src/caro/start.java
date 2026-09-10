@@ -12,6 +12,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class start extends JFrame implements ActionListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JButton[][] btn;
 	private JButton btnNewGame;
 	private int chk = 0;
@@ -42,6 +46,7 @@ public class start extends JFrame implements ActionListener{
 		JPanel pButton = new JPanel();
 		p.add(pButton);
 		pButton.add(btnNewGame = new JButton("New Game"));
+		btnNewGame.addActionListener(e -> ResetGame());
 	}
 	
 	public static void main(String[] args) {
